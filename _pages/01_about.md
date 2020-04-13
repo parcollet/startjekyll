@@ -10,4 +10,8 @@ About content goes here.
 * Another list item
 
 
+add some math 
 $$\int f(x) dx $$
+
+and so on
+
