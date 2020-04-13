@@ -1,6 +1,6 @@
 # Site Settings
 title: Start Jekyll
-email: olivier.parcollet@cea.fr
+email: oparcollet@flatironinstitute.org
 description: >
   TEST
 baseurl: "/startjekyll"
