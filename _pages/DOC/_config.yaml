@@ -1,0 +1,6 @@
+# Configuration file. Edit the options below
+namespaces: []  # Enumerate the namespaces to grab
+sources:        # List the files to include, with REGEX : EXPLAIN
+  file1.hpp: nothing 
+
+

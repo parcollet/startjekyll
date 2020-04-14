@@ -41,7 +41,7 @@ header {
 	padding: 0px 15px;
 	text-align: center;
 	margin: 50px 0 0;
-	height: 50vh;
+	height: 10vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -59,6 +59,24 @@ time {
 	margin: 0 auto;
 }
 
+.includer {
+
+	color: #898989;
+	font-weight: bold;
+	font-style: italic;
+
+}
+
+.signature { 
+	font-style: normal;
+
+}
+
+.table-overloads { 
+  border: 1px solid black;
+  width: 100%;
+ background-color: #F7E1F6;
+ }
 /* Aside */
 
 aside {

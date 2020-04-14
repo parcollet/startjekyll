@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+<br/>
+
+<div> Defined in header <span  class='includer'> &lt;{{page.includer}}&gt; </span>
+
+<!--<ul style="list-style-type:none;">-->
+<!--{% for entity in page.overloads %}-->
+<!--<li> <span class='signature'> {% highlight c++ %}  {{entity[0] }} ({{forloop.index}}) {% endhighlight %}       </span>-->
+<!--{% endfor %} -->
+<!--</ul>-->
+
+
+<table class='table-overloads' >
+<!--<ol style="list-style-type:decimal;">-->
+{% for entity in page.overloads %}
+<tr> 
+<td  valign="top" align="right">
+ {{entity[1].rtype}} 
+</td><td valign="top" align="right">
+ {{page.short_name}}&nbsp;( 
+</td><td valign="top" align="left">
+ {%- for param in entity[1].params -%}
+  {%- if param.link -%}<a href="{{param.link}}">{{param.type|escape }}</a>{%- else -%} {{param.type |escape}} {%- endif -%}
+&nbsp;  {{param.name}}{% if forloop.last == false %}, {% endif %}
+  {%- endfor -%})
+ <td> <a href="{{param.definition_location}}">({{forloop.index}})</a></td>
+</tr>
+{% endfor %} 
+</table>
+<!--</ul>-->
+
+<br>
+<ol style="list-style-type:decimal;">
+{% for entity in page.overload_description %}
+<li>{{entity[1]}}
+{% endfor %} 
+</ol>
+
+
+
+<h5> Parameters</h5>
+
+<table class='param-table' >
+ {% for param in page.params_description %}
+    <tr>
+     <td class="param-name" valign="top" align="right"> {{param[0]}} </td>
+     <td valign="top"> <b>-</b> </td>
+     <td class="param-value"> {{param[1] |markdownify | remove: '<p>' | remove: '</p>'	}} </td>
+    </tr>
+ {% endfor %}
+</table>
+
+<h5> Return value</h5>
+{{page.return}}
+
+<h5> Example </h5>
+<div>
+    {% highlight cpp %}{{page.example.code|strip}}{% endhighlight %}
+</div>
+
+    
+<h5> See also </h5>
+<table class='param-table' >
+ {%- for sa in page.see-also -%}
+    <tr>
+     <td class="" align="right"> <a href="{{sa[0] |replace: "::", "/"}}.html"> {{sa[0]}} </a> </td>
+     <td > <b>-</b> </td>
+     <td class=""> {{sa[1] |markdownify }} </td>
+    </tr>
+ {%- endfor -%}
+</table>
+
+
+{{ content }}

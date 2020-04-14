@@ -10,9 +10,8 @@ About content goes here.
 * Another list item
 
 
-add some math 
 
-A [link](../_pages/zozo "local URI") can also have a title.
+A [KKKK example](../_pages/DOC/nda/KKKK.html "local URI") can also have a title.
 
 
 

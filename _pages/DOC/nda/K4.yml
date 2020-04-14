@@ -1,0 +1,56 @@
+---
+layout: function
+name: KKKK
+qualified_name: nda::KKKK
+description: __MISSING__
+params:
+  i: Documentation of i
+  along_param_name: |
+         Documentation of j which can be reaally really long
+         really veru vniefowiejfonweiofnwoeifowefoweifowei
+         eiwjfowe jfojweofwe ofjoweij nowenfoijwfoj oiweinfo
+
+return: What does it return
+includer: nda.hpp
+overloads:
+  int nda::KKKK(int i):
+    description: __MISSING__
+    namespaces: [nda]
+    rtype: int
+    params:
+      - type: int
+        link: KKKK
+        name: i
+    definition_location: cls1.cpp
+  int nda::KKKK(int i, int j):
+    description: __MISSING__
+    namespaces: [nda]
+    rtype: int
+    params:
+      - type: int
+        link: KKKK
+        name: i
+      - type: int
+        name: j
+  int nda::KKKK(double x, int j):
+    description: __MISSING__
+    namespaces: [nda]
+    rtype: int
+    params:
+      - type: double
+        name: x
+      - type: int
+        name: j
+    definition_location: /Users/oparcollet/B/cpp2pyv2/cls1.cpp:20:3
+
+example: 
+  compile: true
+  code: |
+    #include <vector>
+    int main() { 
+      int i=3;
+        auto g = gf<imfreq>{beta,3, shape};
+    };
+
+---
+
